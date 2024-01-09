@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>MNFR : Sandbox Guys</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="./assest/css/style.css">
+        <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+
+        <script>window.jQuery || document.write('<script src="./assest/js/jquery-2.2.4.min.js"><\/script>')</script>
+
+        <style>
+
+            @media (max-width: 800px) {
+
+                p,h1,h2,h3,h4,a {
+                    color: gray;
+                }
+                
+                .l-side-nav, header, .plat img  {
+                    display: none;
+                }
+
+                .main {
+                    width: 100%;
+                }
+
+                .head {
+                    width: 100%;
+                    text-align: center;
+                    justify-content:flex-start;
+                    height: auto;
+                }
+
+                .head img {  width: 40vh; position: absolute; left: 50%;  right: 50%; bottom: 0; z-index: -1;
+                
+                    transform: translate(-50%, 0);
+                
+                }
+
+                .head h1 {
+                    font-size: 8vh;
+                }
+
+                .head h2 {
+                    font-size: 2vh;
+                }
+
+                .head p {
+                    font-size: 2vh;
+                }
+
+                .botton {
+                    position: absolute;
+                    height: auto;
+                    bottom: 10vh;
+                }
+
+                .bug {
+
+                    display: none;
+
+                }
+
+                .road {
+
+                    flex-direction: column;
+                    width: 100%;
+                    gap: 10px;
+                    justify-content: center;
+                }
+
+                .road li { 
+
+                    width: 100%;    
+                    height: auto;
+                    text-align: center;
+                }
+
+                .road li h3{ 
+
+                    font-size: 2vh;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                .road li p{ 
+
+                    font-size: 1.75vh;
+                    padding: 0;
+                    margin: 1vh 0 0 0;
+                }
+
+                .road > li:nth-child(1) { 
+
+                    background-image: none;
+
+                }
+
+                .road > li:nth-child(2) { 
+
+                    background-image: none;
+
+                }
+
+                .road > li:nth-child(3) { 
+
+                    background-image: none;
+
+                }
+
+                .contact--lockup {
+
+                    flex-direction: column;
+                    max-width: 100%;
+                    justify-content: unset;
+                }
+
+                .contact--lockup .modal {
+
+                    width: 100%;
+                    margin: 5vh 0 0 0;
+                    padding: 0;
+
+                }
+
+                .contact--lockup .info {
+
+                    width: 90%;
+                    margin: 0;
+                    padding-top: 5vh;
+                }
+
+                .info > img {
+
+                    width: 33vh;
+
+                }
+
+                .plat h1 {
+
+                    font-size: 5vh;
+                }
+
+                .plat {
+
+                    border: none;
+                    text-align: center;
+
+                }
+
+                .plat p {
+
+                    font-size: 1.5vh;
+                }
+                
+                .projects {
+
+                    position: absolute;
+                    bottom: 0;
+                    gap: 0;
+                    flex-direction: column;
+                }
+
+                .projects a {
+
+                    padding: 0;
+
+                }
+
+                .projects > a:nth-child(1) { 
+
+                    width: 100%;
+                    background: none;
+
+                }
+
+                .projects > a:nth-child(2) { 
+
+                    display: none;
+
+                }
+
+                .projects > a:nth-child(3) { 
+
+                    display: none;
+
+                }
+
+
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="page">
+            <header>
+                <img src="./assest/img/logo.png" alt="">
+                <p>MNFR</p>
+            </header>
+            <div class="content">
+                <nav class="l-side-nav">
+                    <ul class="side-nav">
+                        <li class="is-active int"><span>Home</span></li>
+                        <li class="int"><span>Project</span></li>
+                        <li class="int"><span>Contact</span></li>
+                    </ul>
+                  </nav>
+                <ul class="main">
+                    <li class="section active">
+                        <div class="head">
+                            <img src="./assest/img/about-visual.png">
+                            <h1> M N F R </h1>
+                            <h2> Hello Stranger !</h2>
+                            <p>
+                                Our planet is taking shape... 
+                                <br> a place for the impossible and beyond your imagination.
+                            </p>
+                        </div>
+                        <div class="botton">
+                            <p class="bug">Road Map:</p>
+                            <ul class="road">
+                                <li>
+                                    <h3>Phase 1</h3>
+                                    <p>Building and expanding community.</p>
+                                </li>
+                                <li>
+                                    <h3>Phase 2</h3>
+                                    <p>Release the first project.</p>
+                                </li>
+                                <li>
+                                    <h3>Phase 3</h3>
+                                    <p>Anything is possible...</p>
+                                </li>
+                            </ul>
+                        </div>                  
+                    </li>
+                    <li class="section ">
+                        <div class="plat">
+                            <div>
+                                <h1>It's all about <br> Community.</h1>
+                                <p>
+                                    Projects is still under construction and some things may change !
+                                        <br> <br>
+                                    more information will be released soon...
+                                </p>
+                                <a href="https://discord.gg/bqwTgRZH2P">
+                                    Join Discord
+                                </a>
+                            </div>
+                            <img src="./assest/img/introduction-visual.png">
+                        </div>
+                        <div class="projects">
+                            <a href="./SBG">
+                                <h3>Sandbox Guys</h3>
+                                <h4>SAG</h4>
+                                <p>
+                                    They are small cube-shaped creatures that have a strange relationship with cardboard.
+                                </p>
+                            </a>
+                            <a style="cursor: not-allowed;">
+                                <h3>Unknown</h3>
+                                <h4>II</h4>
+                                <p>                  
+                                    Someone needs to watch out for our little sandy friends, they do a lot of crazy things.
+                                </p>   
+                            </a>
+                            <a style="cursor: not-allowed;">
+                                <h3>Unknown</h3>
+                                <h4>III</h4>
+                                <p>
+                                    Charming and dangerous companions of the master, loyal and sensitive like zombies.
+                                </p>
+                            </a>
+                        </div>
+                    </li>   
+                    <li class="section ">
+                        <div class="contact">
+                            <div class="contact--lockup">
+                              <div class="info">
+                                <img src="./assest/img/mnfr.png" alt="mnfr">
+                                <p> 
+                                  it is a little strange, we call this mnfr !
+                                  <br> <br>
+                                  At first we started with game development, but our path changed and we got here.
+                                </p>
+                              </div>
+                              <div class="modal">
+                                <div class="modal--information">
+                                  <h3> don't miss anything !</h3>
+                                </div>
+                                <ul class="modal--options">
+                                  <li><a target="_blank" href="https://twitter.com/0xMNFR">Twitter</a></li>
+                                  <li><a target="_blank" href="https://instagram.com/mnfr_official">instagram</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>                                       
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script src="./assest/js/script.js"></script>
+    </body>
+</html>

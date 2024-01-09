@@ -1,0 +1,11 @@
+{
+  "name": "SBG : 50",
+  "image": "https://sandboxguys.github.io/images/S1.png",
+  "description": "Each sandbox has the capability to receive and store ETH, securing a share of the sales. 0.25% of the Creators earnings is sent to a random box and the owner can then collect the funds from the designated box.",
+  "attributes": [
+    {
+      "trait_type": "Size",
+      "value": "Type 1"
+    }
+  ]
+}
