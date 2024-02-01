@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Harvest</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@300;400;500&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" />
+  <link rel="icon" href="../favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="../style.css">
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.3.6/dist/web3.min.js"></script>
+
+  <style>
+    @media (max-width: 800px) 
+    { 
+      .app {
+        display: block;
+      }
+      .big {
+        margin-bottom: 2vh;
+      }
+      .big img {
+        width: 100%;
+      }
+      .box {
+        width: 100%;
+        height: auto;
+      }
+      .side {
+        width: 100%;
+        height: auto;
+      }
+      .new {
+        padding: 0 4vh 4vh 4vh;
+        height: 100%;
+      }
+      ul {
+        font-size: 20px;
+      }
+    }
+
+  </style>
+
+</head>
+<body>
+  <header>
+    <h1>SANDBOX GUYS</h1>
+    <nav>
+      <a href="../"><span>⌥ </span>home<span>'</span></a>
+      <a class="active"><span>⌥ </span>harvest<span>'</span></a>
+
+      <a target="_blank" href="https://mnfr.gitbook.io/sandbox-guys"><span>⌥ </span>about<span>"</span></a>
+      <a target="_blank" href="https://mint.fun/ethereum/0x2a60293bbe8F580d348A707f51298bb47dD4707F"><span>⌥ </span>mint<span>"</span></a>
+      <a target="_blank" href="https://opensea.io/collection/sandbox-guys"><span>⌥ </span>opensea<span>"</span></a> 
+    </nav>
+  </header>
+
+  <section class="new">
+    <div class="app">
+      <div class="big box">
+        <img src="../assest/image/box.gif" alt="">
+        <p>harvest:</p>
+        <ul style="padding: 2vh 0;">
+          Currently, no valuable boxes have been minted !
+        </ul>
+        <button id="connect-button" onclick="connectWeb3()">Connect</button>
+      </div>
+      <div class="side">
+        <div class="small box">
+          <p>top boxes:</p>
+          <ul>
+            <li> 3932 = 0.0000125 eth </li>
+          </ul>
+        </div>
+        <div class="small box">
+          <p>owned: <span id="num">n/a</span></p>
+          <ul id="list"></ul>
+        </div>
+      </div>
+    </div>
+    <p id="balance">total = n/a</p>
+  </section>
+
+  <footer>
+    <a target="_blank" href="https://etherscan.io/token/0x2a60293bbe8f580d348a707f51298bb47dd4707f">contract</a>
+    <div>
+      <a target="_blank" href="https://x.com/SandboxGuys"><i class="fab fa-twitter"></i></a>
+      <a target="_blank" href="https://discord.gg/bqwTgRZH2P"><i class="fab fa-discord"></i></a>
+      <a style="cursor: pointer;" onclick="toggle()"><i class="fas fa-adjust"></i></a>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+
+  <script>
+
+    const contractAddress = '0x2a60293bbe8f580d348a707f51298bb47dd4707f';
+    const apiKey = 'HVXWGBC31DWDWP3MEU7VWP6SBUNGRFPVCC';
+
+    const url = `https://api.etherscan.io/api?module=account&action=balance&address=${contractAddress}&tag=latest&apikey=${apiKey}`;
+
+    async function fetchBalance() {
+        try {
+
+            const response = await fetch(url);
+            const data = await response.json();
+
+            if (data.status === '1') {
+                const balanceWei = BigInt(data.result);
+                const balanceEth = Number(balanceWei) / 1e18;
+
+                // Format the balance to show 8 decimal places
+                const formattedBalance = balanceEth.toFixed(7);
+                
+                // Update the HTML content with formatted balance
+                document.getElementById('balance').innerText = `total = ${formattedBalance} eth`;
+            } else {
+                console.error(`Error: ${data.message}`);
+            }
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    }
+
+    fetchBalance();
+</script>
+
+</body>
+</html>
