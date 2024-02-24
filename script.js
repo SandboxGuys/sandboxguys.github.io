@@ -91,3 +91,24 @@ async function get() {
     }  
   }
 }
+
+
+
+
+
+
+
+
+// about 
+
+showSection('P01')
+
+function showSection(id) {
+  
+  console.log(id);
+
+  document.querySelectorAll('.card').forEach(section => {
+    section.style.display = (section.id === id) ? 'block' : 'none';
+    console.log(section.id, id);
+  });
+}

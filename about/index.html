@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>About</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Sandbox Guys is a collection of 12,000 NFTs that lives on the Ethereum blockchain. These small cube-shaped creatures have a strange relationship with cardboard.">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@300;400;500&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" />
+
+  <link rel="icon" href="../assest/image/light.png" type="image/x-icon">
+  <link rel="icon" href="../assest/image/dark.png" type="image/x-icon" media="(prefers-color-scheme: dark)">
+
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    @media (max-width: 800px) 
+    {
+
+      .home {
+        height: 100vh;
+      }
+
+      .home img {
+        width: 85%;
+        margin-bottom: 5vh;
+      }
+
+      .home h1 {
+        font-size: 40px;
+      }
+      
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SANDBOX GUYS</h1>
+    <nav>
+      <a href="../"><span>⌥ </span>home<span>'</span></a>
+      <a href="../harvest"><span>⌥ </span>harvest<span>'</span></a>
+      <a class="active"><span>⌥ </span>about<span>'</span></a>
+      
+      <a target="_blank" href="https://mint.fun/ethereum/0x2a60293bbe8F580d348A707f51298bb47dD4707F"><span>⌥ </span>mint<span>"</span></a>
+      <a target="_blank" href="https://opensea.io/collection/sandbox-guys"><span>⌥ </span>opensea<span>"</span></a> 
+
+    </nav>
+  </header>
+
+  <section class="about">
+    <nav>
+        <ul>
+            <li>
+              <a onclick="showSection('P01')">⭐ Overview</a>
+            </li>
+                <p>introduction</p>
+              <li>
+                <a onclick="showSection('P02')">🍀 Minting</a>
+              </li>
+              <li>
+                <a onclick="showSection('P03')">📦 Boxes</a>
+              </li>
+              <li>
+                <a onclick="showSection('P04')">🗺️ Roadmap</a>
+              </li>
+                <p>utility</p>
+            <li>
+              <a onclick="showSection('P05')">🤑 Harvest</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="P01" class="card">
+      <h2>Overview</h2>
+      <p>Sandbox Guys (SBG) is an NFT collection where 12,000 creatures come to life on the Ethereum blockchain through the creative hands of Mnfr. They take the form of cardboard boxes filled with sand, sent by the great master to provide living conditions on the planet. <br><br></p>
+      <b>List of features:</b>
+      <ul>
+        <li>
+          <h4>Harvest:</h4>
+          <p>Withdraw a share of the creator earning income from each box !</p>
+        </li>
+        <li>
+          <h4>Unknown:</h4>
+          <p>More information will come soon..!</p>
+        </li>
+      </ul>
+      </div>
+    <div id="P02" class="card">
+      <h2>Minting</h2>
+      <p>Minting will be publicly accessible on the Ethereum blockchain, there is no limit and a maximum of 25 will be allowed per transaction, fewer boxes will cost less gas !</p>
+      <ul>
+        <li><b>Mint Data:</b> December 21, 2023, 6:00 PM</li>
+        <li><b>Supply:</b> 12,000</li>
+        <li><b>Price:</b> FREE + Gas !</li>
+      </ul>
+<!--      <p>To mint these boxes, you can use the following methods.</p>  -->
+    </div>
+    <div id="P03" class="card">
+      <h2>Boxes</h2>
+      <p>
+        These are cardboard boxes filled with sand collected from the planet itself, containing 12,000 
+        in 6 different sizes, 2,000 of each; to improve the quality and clarify the metadata and use the features considered in the future, the sizes trait will not be random.
+      </p>
+
+      <b>Creatures will remain inside these boxes until all of them are minted !</b>
+
+      <ul>
+        <li>
+          <img src="../assest/image/boxes/S1.png" alt="">
+          <p>type 1</p>
+          <p>1 to 2k</p>
+        </li>
+        <li>
+          <img src="../assest/image/boxes/S2.png" alt="">
+          <p>type 2</p>
+          <p>2k to 4k</p>
+        </li>
+        <li>
+          <img src="../assest/image/boxes/S3.png" alt="">
+          <p>type 3</p>
+          <p>4k to 6k</p>
+        </li>
+        <li>
+          <img src="../assest/image/boxes/S4.png" alt="">
+          <p>type 4</p>
+          <p>6k to 8k</p>
+        </li>
+        <li>
+          <img src="../assest/image/boxes/S5.png" alt="">
+          <p>type 5</p>
+          <p>8k to 10k</p>
+        </li>
+        <li>
+          <img src="../assest/image/boxes/S6.png" alt="">
+          <p>type 6</p>
+          <p>10k to 12k</p>
+        </li>
+      </ul>
+    </div>
+    <div id="P04" class="card">
+                <h2>Roadmap</h2>
+
+    </div>
+    <div id="P05" class="card">
+      <h2>Harvest</h2>
+      <p>
+        Following each sale of an item from this collection,
+        an automated process randomly allocates 0.25% of the sale amount to the balance of one of these boxes,
+        each box has an eth balance that its owner can check and withdraw by entering its ID !
+      </p>
+      <br>
+      <p>
+       <b>Example:</b> Let's assume a box is sold for 1 ETH... 0.0025 ETH will be sent to a random box !
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <a target="_blank" href="https://etherscan.io/token/0x2a60293bbe8f580d348a707f51298bb47dd4707f">Contract</a>
+    <div class="social-links">
+      <a target="_blank" href="https://x.com/SandboxGuys"><i class="fab fa-twitter"></i></a>
+      <a target="_blank" href="https://discord.gg/bqwTgRZH2P"><i class="fab fa-discord"></i></a>
+      <a style="cursor: pointer;" onclick="toggle()"><i class="fas fa-adjust"></i></a>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+
+</body>
+</html>
